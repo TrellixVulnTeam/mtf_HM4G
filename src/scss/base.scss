@@ -22,6 +22,25 @@ body {
   position: relative;
   box-sizing: border-box;
   text-align: left;
+
+  &::after {
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    content: '';
+    width: 50vw;
+    height: 50vw;
+    z-index: -1;
+    background: url(../img/footer-mobile.svg) no-repeat center/contain;
+
+    @include respond-to(medium) {
+      width: 45vw;
+      height: 45vw;
+      max-height: 1200px;
+      max-width: 1200px;
+      background: url(../img/footer-desktop.svg) no-repeat center/contain;
+    }
+  }
 }
 
 .no-wrap-text {
@@ -59,6 +78,7 @@ img {
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 24px;
+  font-weight: 400;
 }
 
 section {

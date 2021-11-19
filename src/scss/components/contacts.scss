@@ -1,6 +1,6 @@
 .contacts {
   &__title {
-    margin-bottom: 48px;
+    margin-bottom: 24px;
   }
 
   &__animate {
@@ -21,12 +21,39 @@
   &__address-phone {
     order: -1;
   }
+
+  &__address-name {
+    color: #AFC1C1;
+  }
+
+  &__address-item {
+    margin-bottom: 24px;
+  }
 }
 
-@include respond-to(medium) {
+@include respond-to(sm-medium) {
   .contacts {
     &__wrap {
       position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__address-item{
+      width: 43%;
+
+      p {
+        margin-top: 16px;
+      }
+
+      &--full-width {
+        width: 100%;
+      }
+
+      &--mail {
+        width: 50%;
+      }
     }
 
     &__address {
