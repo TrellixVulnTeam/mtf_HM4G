@@ -10,6 +10,7 @@
 
 html {
   scroll-behavior: smooth;
+  min-height: 100vh;
 }
 
 body {
@@ -79,6 +80,7 @@ section {
 @include respond-to(large) {
   body {
     font-size: 20px;
+    line-height: 30px;
   }
   section {
     margin-bottom: 180px;

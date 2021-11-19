@@ -2,7 +2,6 @@
 @import '../variables';
 
 .fields {
-
   &__wrap {
     margin-bottom: 40px;
   }
@@ -11,12 +10,12 @@
     width: 100%;
     img {
       width: 100%;
-      //max-width: 350px;
     }
   }
 
   &__list {
     padding-left: 30px;
+
     li {
       margin-bottom: 16px;
     }
@@ -31,6 +30,7 @@
 
     &__img {
       width: 43%;
+
       img {
         max-width: 516px;
       }

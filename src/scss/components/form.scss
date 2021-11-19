@@ -30,9 +30,12 @@
     z-index: -1;
     color: #AFC1C1;
   }
+  textarea {
+    padding: 20px 0;
+  }
 
   &__btn {
-    @include button($primary-color)
+    @include button($primary-color,$btnHoverColor)
   }
 }
 
@@ -48,7 +51,7 @@
 
       &--textaria {
         width: 100%;
-        margin-top: 18px;
+        margin-top: 0;
         margin-bottom: 62px;
       }
     }

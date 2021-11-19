@@ -18,7 +18,6 @@
 .nav-collapse li {
   width: 100%;
   display: block;
-  font-weight: 500;
   font-size: 32px;
   line-height: 110%;
   padding: 16px;
@@ -38,12 +37,12 @@
   position: absolute;
   display: block;
   overflow: hidden;
-  zoom: 1;
 }
 
 .nav-collapse.opened {
   max-height: 999999px;
   z-index: 100;
+
   ul {
     position: relative;
     z-index: 102;
@@ -59,6 +58,7 @@
   -o-user-select: none;
   user-select: none;
   vertical-align: baseline;
+
   img {
     vertical-align: middle;
   }
@@ -66,8 +66,10 @@
 
 .js.js-nav-active {
   overflow: hidden;
+
   .header {
     background-color: $bg;
+
     &__logo {
       width: 140px;
       height: 24px;
@@ -81,13 +83,15 @@
     position: relative;
     margin-bottom: 0;
   }
+
   .js .nav-collapse.closed {
     max-height: none;
     width: auto;
     transition: none !important;
     position: relative !important;
-    margin-bottom: 8px;
+    margin-bottom: 0;
   }
+
   .nav-collapse ul {
     display: flex;
     min-height: auto !important;
@@ -101,9 +105,8 @@
 
       a {
         padding: 10px 16px;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 120%;
+        font-size: 20px;
+        line-height: 100%;
         color: $lightText;
         span {
           display: none;
@@ -118,6 +121,7 @@
       }
     }
   }
+
   .nav-toggle {
     display: none;
   }

@@ -14,6 +14,7 @@
   width: 100%;
   background-color: transparent;
   z-index: 11;
+
   &__logo {
     width: 140px;
     height: 24px;
@@ -25,12 +26,10 @@
   .header {
     padding: 12px 10%;
     min-height: $header-desktop;
-    left: calc((100vw - 1200px) / 2);
 
     &__logo {
       width: 226px;
       height: 40px;
-      //flex-grow: 1;
       background: url(../img/logo-mobile.svg) no-repeat center/contain;
 
       img {
@@ -50,7 +49,6 @@
     &__logo {
       width: 226px;
       height: 40px;
-      //flex-grow: 1;
       background: url(../img/logo-mobile.svg) no-repeat center/contain;
 
       img {

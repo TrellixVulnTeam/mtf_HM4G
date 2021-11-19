@@ -24,7 +24,7 @@
   &__text-wrap {
     order: 2;
     position: relative;
-    max-width: 523px;
+    max-width: 328px;
   }
 
   &__btn-wrap {
@@ -38,10 +38,14 @@
     line-height: 110%;
     margin: 0;
     color: $lightText;
+    br {
+      display: none;
+    }
   }
 
   &__btn {
-    @include button($lightText)
+    @include button($lightText, $accent-color);
+    margin-top: 50px;
   }
 }
 
@@ -49,6 +53,7 @@
   .first-screen {
     justify-content: center;
     position: relative;
+
     .container {
       left: 10%;
       top: calc(50% - 100px);
@@ -59,19 +64,24 @@
       order: 0;
       width: 50%;
       padding: 0;
+      max-width: 523px;
     }
 
     &__title {
       font-size: 56px;
       line-height: 100%;
       letter-spacing: -2px;
+      br {
+        display: inline;
+      }
     }
 
     &__text {
       margin-top: 40px;
     }
 
-    &__animate {
+    &__btn {
+      margin-top: 65px;
     }
   }
 }
@@ -96,9 +106,14 @@
     &__text {
       margin-top: 40px;
     }
+  }
+}
 
-    &__animate {
-
+@media (min-width: 1500px){
+  .first-screen {
+    .container {
+      width: 1200px;
+      left: calc((100vw - 1200px) / 2);
     }
   }
 }

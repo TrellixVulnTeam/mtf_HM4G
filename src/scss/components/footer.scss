@@ -6,15 +6,15 @@
   }
 
   &__nav {
-    margin-bottom: 32px;
+    margin-bottom: 20px;
   }
 
   &__copyright {
-    font-weight: 500;
     font-size: 12px;
     line-height: 150%;
-    color: #9D9FB8;
-    text-align: center;
+    color: #AFC1C1;
+    text-align: left;
+    margin-bottom: 20px;
   }
 
   &__link {
@@ -55,12 +55,15 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 50px;
+      margin-bottom: 80px;
     }
 
     &__copyright {
       text-align: center;
-      line-height: 120%;
+      line-height: 100%;
+      color: #002424;
+      font-size: 14px;
+      margin-bottom: 40px;
     }
   }
 }

@@ -1,7 +1,7 @@
 let c = document.createElement('canvas').getContext('2d')
 let containerCanvas = document.getElementById('animateWind')
 let postctx = containerCanvas.appendChild(document.createElement('canvas')).getContext('2d')
-// postctx.fi
+
 let canvas = c.canvas
 let vertices = []
 let vertexCount = 10000
