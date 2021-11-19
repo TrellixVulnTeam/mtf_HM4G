@@ -1,0 +1,46 @@
+@import '../mixins';
+@import '../variables';
+
+.fields {
+
+  &__wrap {
+    margin-bottom: 40px;
+  }
+
+  &__img {
+    width: 100%;
+    img {
+      width: 100%;
+      //max-width: 350px;
+    }
+  }
+
+  &__list {
+    padding-left: 30px;
+    li {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+@include respond-to(sm-medium) {
+  .fields {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__img {
+      width: 43%;
+      img {
+        max-width: 516px;
+      }
+    }
+
+    &__wrap {
+      width: 50%;
+      margin-bottom: 0;
+      max-width: 570px;
+      padding-right: 20px;
+    }
+  }
+}

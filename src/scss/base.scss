@@ -1,0 +1,102 @@
+@import "variables";
+@import "mixins";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: $text-color;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Baskervville', sans;
+  font-size: 16px;
+  line-height: 150%;
+  background: $bg;
+  overflow-x: hidden;
+  position: relative;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.no-wrap-text {
+  white-space: nowrap;
+}
+
+p {
+  color: $text-color;
+}
+
+img {
+  height: auto;
+}
+
+.mb-0 {
+  margin-bottom: 0!important;
+}
+
+#overlay {
+  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.56) 100%);
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.title {
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0.5px;
+  color: $primary-color;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+section {
+  margin-bottom: 80px;
+}
+
+@include respond-to(medium) {
+  body {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .title {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+}
+
+@include respond-to(large) {
+  body {
+    font-size: 20px;
+  }
+  section {
+    margin-bottom: 180px;
+  }
+}
+
+.hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden,
+input[type="range"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

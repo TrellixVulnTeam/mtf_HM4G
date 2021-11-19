@@ -1,0 +1,104 @@
+@import '../mixins';
+@import '../variables';
+
+.first-screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 0;
+  color: $lightText;
+  background-color: $blackBg;
+
+  .container {
+    position: absolute;
+    z-index: 10;
+    left: 4.5%;
+    padding-top: 260px;
+  }
+
+  canvas {
+    position: relative;
+    z-index: 9;
+  }
+
+  &__text-wrap {
+    order: 2;
+    position: relative;
+    max-width: 523px;
+  }
+
+  &__btn-wrap {
+    order: 3;
+    width: 100%;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 110%;
+    margin: 0;
+    color: $lightText;
+  }
+
+  &__btn {
+    @include button($lightText)
+  }
+}
+
+@include respond-to(medium) {
+  .first-screen {
+    justify-content: center;
+    position: relative;
+    .container {
+      left: 10%;
+      top: calc(50% - 100px);
+      padding-top: 0;
+    }
+
+    &__text-wrap {
+      order: 0;
+      width: 50%;
+      padding: 0;
+    }
+
+    &__title {
+      font-size: 56px;
+      line-height: 100%;
+      letter-spacing: -2px;
+    }
+
+    &__text {
+      margin-top: 40px;
+    }
+
+    &__animate {
+    }
+  }
+}
+
+
+@include respond-to(large) {
+  .first-screen {
+    padding-top: 0;
+    position: relative;
+
+    &__text-wrap {
+      order: 0;
+      width: 50%;
+      padding: 0;
+      max-width: 523px;
+    }
+
+    &__title {
+      font-size: 64px;
+    }
+
+    &__text {
+      margin-top: 40px;
+    }
+
+    &__animate {
+
+    }
+  }
+}

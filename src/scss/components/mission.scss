@@ -1,0 +1,39 @@
+@import '../mixins';
+@import '../variables';
+
+.mission {
+
+  &__text-wrap {
+    margin-bottom: 40px;
+  }
+
+  &__animate {
+    width: 100%;
+    img {
+      width: 100%;
+      //max-width: 350px;
+    }
+  }
+}
+
+@include respond-to(sm-medium) {
+  .mission {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__animate {
+      width: 50%;
+      order: -1;
+      img {
+        max-width: 570px;
+      }
+    }
+
+    &__text-wrap {
+      width: 43%;
+      margin-bottom: 0;
+    }
+  }
+}
+

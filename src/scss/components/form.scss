@@ -1,0 +1,83 @@
+.form {
+  &__group {
+    position: relative;
+    margin-bottom: 48px;
+  }
+
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    color: #AFC1C1;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0 0 10px 0;
+    border: none;
+    border-bottom: 1px solid $primary-color;
+    background-color: transparent;
+    outline: none;
+
+    &:focus ~ .form__label,
+    &:not(:placeholder-shown) ~ .form__label {
+      display: none;
+    }
+  }
+
+  &__label-textarea {
+    z-index: -1;
+    color: #AFC1C1;
+  }
+
+  &__btn {
+    @include button($primary-color)
+  }
+}
+
+@media (min-width: 750px) {
+  .form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    &__group {
+      width: 48%;
+
+      &--textaria {
+        width: 100%;
+        margin-top: 18px;
+        margin-bottom: 62px;
+      }
+    }
+  }
+}
+
+.grow-wrap {
+  display: grid;
+}
+
+.grow-wrap::after {
+  content: attr(data-replicated-value) "";
+  white-space: pre-wrap;
+  visibility: hidden;
+}
+
+.grow-wrap > textarea {
+  resize: none;
+  overflow: hidden;
+}
+
+.grow-wrap > textarea,
+.grow-wrap::after {
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid $primary-color;
+  padding: 0 0 0 0;
+  font: inherit;
+  grid-area: 1 / 1 / 2 / 2;
+  outline: none;
+  line-height: 2!important;
+}

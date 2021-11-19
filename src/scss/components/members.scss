@@ -1,0 +1,38 @@
+@import '../mixins';
+@import '../variables';
+
+.members {
+
+  &__wrap {
+    margin-bottom: 40px;
+  }
+
+  &__img {
+    width: 100%;
+    img {
+      width: 100%;
+      //max-width: 350px;
+    }
+  }
+}
+
+@include respond-to(sm-medium) {
+  .members {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__img {
+      width: 50%;
+      order: -1;
+      img {
+        max-width: 570px;
+      }
+    }
+
+    &__wrap {
+      width: 43%;
+      margin-bottom: 0;
+    }
+  }
+}

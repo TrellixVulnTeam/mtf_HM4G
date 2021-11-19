@@ -1,0 +1,124 @@
+@import '../variables';
+@import '../mixins';
+
+.nav-collapse {
+  width: 100%;
+}
+
+.nav-collapse ul {
+  margin: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+  margin-top: 50px;
+  min-height: calc(100vh - 63px) !important;
+  background-color: $bg;
+}
+
+.nav-collapse li {
+  width: 100%;
+  display: block;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 110%;
+  padding: 16px;
+
+  a {
+    text-decoration: none;
+    &:focus, &:hover, &:active {
+      background-color: transparent;
+      color: $accent-color;
+    };
+  }
+}
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.nav-collapse.opened {
+  max-height: 999999px;
+  z-index: 100;
+  ul {
+    position: relative;
+    z-index: 102;
+  }
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  vertical-align: baseline;
+  img {
+    vertical-align: middle;
+  }
+}
+
+.js.js-nav-active {
+  overflow: hidden;
+  .header {
+    background-color: $bg;
+    &__logo {
+      width: 140px;
+      height: 24px;
+      background: url(../img/logo-mobile-black.svg) no-repeat center/contain;
+    }
+  }
+}
+
+@include respond-to(medium) {
+  .js .nav-collapse {
+    position: relative;
+    margin-bottom: 0;
+  }
+  .js .nav-collapse.closed {
+    max-height: none;
+    width: auto;
+    transition: none !important;
+    position: relative !important;
+    margin-bottom: 8px;
+  }
+  .nav-collapse ul {
+    display: flex;
+    min-height: auto !important;
+    padding: 0;
+    background-color: transparent;
+    margin-top: 0;
+
+    li {
+      margin-bottom: 0;
+
+
+      a {
+        padding: 10px 16px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 120%;
+        color: $lightText;
+        span {
+          display: none;
+        }
+      }
+
+      &:last-child {
+        padding-right: 0;
+        a {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+  .nav-toggle {
+    display: none;
+  }
+}

@@ -1,0 +1,61 @@
+@import '../mixins';
+@import '../variables';
+@import '../mixins';
+
+.header {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 4.5%;
+  min-height: $header;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: transparent;
+  z-index: 11;
+  &__logo {
+    width: 140px;
+    height: 24px;
+    background: url(../img/logo-mobile.svg) no-repeat center/contain;
+  }
+}
+
+@include respond-to(medium) {
+  .header {
+    padding: 12px 10%;
+    min-height: $header-desktop;
+    left: calc((100vw - 1200px) / 2);
+
+    &__logo {
+      width: 226px;
+      height: 40px;
+      //flex-grow: 1;
+      background: url(../img/logo-mobile.svg) no-repeat center/contain;
+
+      img {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+@media (min-width: 1500px){
+  .header {
+    padding: 12px 0;
+    min-height: $header-desktop;
+    width: 1200px;
+    left: calc((100vw - 1200px) / 2);
+
+    &__logo {
+      width: 226px;
+      height: 40px;
+      //flex-grow: 1;
+      background: url(../img/logo-mobile.svg) no-repeat center/contain;
+
+      img {
+        width: 100% !important;
+      }
+    }
+  }
+}
