@@ -6,9 +6,9 @@
   "author": "Anastsia Artemeva",
   "license": "ISC",
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "build": "cross-env NODE_ENV=production webpack --mode production --stats-children",
     "watch": "webpack -w",
-    "start": "cross-env NODE_ENV=development webpack serve"
+    "start": "cross-env NODE_ENV=development webpack serve --stats-children"
   },
   "devDependencies": {
     "@babel/core": "^7.13.14",

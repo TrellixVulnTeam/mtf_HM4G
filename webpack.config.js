@@ -97,6 +97,17 @@ module.exports = {
                 }]
             },
             {
+                test: /\.(ttf|eot|woff|woff2|svg|gif|otf)(\?v=[0-9]\.[0-9]\.[0-9])?$/i,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'fonts/',
+                        publicPath: 'fonts/',
+                    }
+                }]
+            },
+            {
                 test: /\.scss$/i,
                 use: [
                     MiniCssExtractPlugin.loader,

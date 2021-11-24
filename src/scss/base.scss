@@ -1,6 +1,13 @@
 @import "variables";
 @import "mixins";
 
+@font-face {
+  font-family: 'BaskervilleOldFace';
+  src: url('../fonts/BaskervilleOldFace.ttf') format('ttf'),url('../fonts/BaskervilleOldFace.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,7 +21,7 @@ html {
 }
 
 body {
-  font-family: 'Baskervville', sans;
+  font-family: 'Baskervville', serif;
   font-size: 16px;
   line-height: 150%;
   background: $bg;
